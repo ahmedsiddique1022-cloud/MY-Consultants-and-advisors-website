@@ -66,7 +66,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-medium text-foreground">Call Now</span>
-              <span className="text-sm font-bold text-primary">+971 58 843 8475</span>
+              <span className="text-sm font-bold text-primary">+971553305738</span>
             </div>
           </a>
         </nav>
