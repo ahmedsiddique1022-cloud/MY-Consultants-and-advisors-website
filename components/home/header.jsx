@@ -90,9 +90,9 @@ export default function Header() {
             Services
           </Link>
 
-          <Link href="#blog" className="block px-4 py-2 text-sm hover:bg-muted rounded-lg transition-colors">
+          {/* <Link href="#blog" className="block px-4 py-2 text-sm hover:bg-muted rounded-lg transition-colors">
             Blogs
-          </Link>
+          </Link> */}
 
           <Link href="/contact-us" className="block px-4 py-2 text-sm hover:bg-muted rounded-lg transition-colors">
             Contact Us
