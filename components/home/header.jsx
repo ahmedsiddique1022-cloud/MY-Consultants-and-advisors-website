@@ -60,13 +60,13 @@ export default function Header() {
           </Link>
 
           {/* Call Now button */}
-          <a href="tel:+971588438475" className="flex items-center gap-3 px-4 py-2 hover:opacity-80 transition-opacity group">
+          <a href="tel:+971553305738" className="flex items-center gap-3 px-4 py-2 hover:opacity-80 transition-opacity group">
             <div className="w-11 h-11 bg-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 shadow-lg group-hover:shadow-xl group-hover:transition-all group-hover:duration-300 animate-popDiv">
               <MdPhone className="w-6 h-6 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-medium text-foreground">Call Now</span>
-              <span className="text-sm font-bold text-primary">+971553305738</span>
+              <span className="text-sm font-bold text-primary">+971 55 3305 738</span>
             </div>
           </a>
         </nav>
@@ -103,7 +103,7 @@ export default function Header() {
           </Link>
 
           {/* Call Now button */}
-          <a href="tel:+971588438475" className="w-full px-4 py-3 flex items-center gap-3 hover:opacity-80 transition-opacity group border border-border rounded-lg relative">
+          <a href="tel:+971553305738" className="w-full px-4 py-3 flex items-center gap-3 hover:opacity-80 transition-opacity group border border-border rounded-lg relative">
             {/* Ripple circles */}
             <div className="absolute w-11 h-11 rounded-full border border-primary/30 animate-ripple1" style={{ left: '28px', top: '50%', transform: 'translate(-50%, -50%)' }} />
             <div className="absolute w-11 h-11 rounded-full border border-primary/30 animate-ripple2" style={{ left: '28px', top: '50%', transform: 'translate(-50%, -50%)' }} />
@@ -115,7 +115,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-medium text-foreground">Call Now</span>
-              <span className="text-sm font-bold text-primary">+971 58 843 8475</span>
+              <span className="text-sm font-bold text-primary">+971 55 3305 738</span>
             </div>
           </a>
         </nav>

@@ -27,22 +27,15 @@ export default function ContactForm() {
     setIsSubmitting(true)
     
     try {
-      // Send email using mailto (opens default email client)
-      const subject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`)
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Company: ${formData.company || 'N/A'}\n` +
-        `Service: ${formData.service}\n\n` +
-        `Message:\n${formData.message}`
-      )
-      
-      // Open email client with pre-filled data
-      window.location.href = `mailto:myconsultantsandadvisors@gmail.com?subject=${subject}&body=${body}`
-      
-      // Show success message
-      setTimeout(() => {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
         setIsSubmitting(false)
         setSubmitStatus("success")
         setFormData({
@@ -56,8 +49,13 @@ export default function ContactForm() {
         
         // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus(null), 5000)
-      }, 1000)
+      } else {
+        setIsSubmitting(false)
+        setSubmitStatus("error")
+        setTimeout(() => setSubmitStatus(null), 5000)
+      }
     } catch (error) {
+      console.error('Error:', error)
       setIsSubmitting(false)
       setSubmitStatus("error")
       setTimeout(() => setSubmitStatus(null), 5000)
@@ -65,6 +63,24 @@ export default function ContactForm() {
   }
 
   return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes contactFadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fadeInUp {
+          animation: contactFadeInUp 0.8s ease-out 0.2s backwards;
+        }
+      `}} />
+      
     <div className="pt-20 pb-20 bg-gradient-to-br from-white via-blue-50/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
@@ -131,7 +147,7 @@ export default function ContactForm() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
                   <a 
-                    href="mailto:info@myconsultantsandadvisors.com"
+                    href="mailto:myconsultantsandadvisors@gmail.com"
                     className="text-muted-foreground hover:text-accent transition-colors break-all"
                   >
                     myconsultantsandadvisors@gmail.com
@@ -354,5 +370,6 @@ export default function ContactForm() {
         </div>
       </div>
     </div>
+    </>
   )
 }
