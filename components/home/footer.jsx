@@ -234,11 +234,11 @@ export default function Footer() {
               <p>We do not sell or rent your personal information to third parties. We may share information with service providers, partners, and affiliates who assist us in operating our website and providing services, all bound by confidentiality agreements.</p>
 
               <h3 className="text-lg font-semibold text-primary mt-6">6. Your Rights</h3>
-              <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or transfer your personal information. Contact us at info@myconsultantsandadvisors.com to exercise these rights.</p>
+              <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or transfer your personal information. Contact us at myconsultantsandadvisors@gmail.com to exercise these rights.</p>
 
               <h3 className="text-lg font-semibold text-primary mt-6">7. Contact Us</h3>
               <p>If you have questions about this Privacy Policy, please contact us at:</p>
-              <p>Email: info@myconsultantsandadvisors.com<br />Phone: +971 55 3305 738<br />Address: Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</p>
+              <p>Email: myconsultantsandadvisors@gmail.com<br />Phone: +971 55 3305 738<br />Address: Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</p>
             </div>
           </div>
         </div>
@@ -301,7 +301,7 @@ export default function Footer() {
 
               <h3 className="text-lg font-semibold text-primary mt-6">11. Contact</h3>
               <p>If you have any questions about these Terms of Service, please contact us at:</p>
-              <p>Email: info@myconsultantsandadvisors.com<br />Phone: +971 55 3305 738<br />Address: Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</p>
+              <p>Email: myconsultantsandadvisors@gmail.com<br />Phone: +971 55 3305 738<br />Address: Business Centre, Sharjah Publishing City Free Zone, Sharjah, UAE</p>
             </div>
           </div>
         </div>
